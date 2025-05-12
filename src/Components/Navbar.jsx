@@ -6,7 +6,7 @@ import { MdShoppingCart,MdBookmarkAdd } from "react-icons/md";
 
 const Navbar = () => {
   return (
-    <div className="navbar p-0 bg-base-100 shadow-sm">
+    <div className="navbar px-8 md:px-12 lg:px-16 xl:px-24 p-0 bg-base-100 shadow-sm">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className=" cursor-pointer mr-2 lg:hidden">
@@ -66,7 +66,7 @@ const Navbar = () => {
         </div>
 
         <NavLink to="/" className="font-bold text-xl">
-          Flagship Faceoff
+          Flagship FaceOFF
         </NavLink>
       </div>
 
