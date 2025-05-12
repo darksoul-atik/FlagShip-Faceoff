@@ -1,13 +1,17 @@
 import { createBrowserRouter } from "react-router";
-import App from "../App";
-import Home from "./Home/Home";
 import MainLayout from "../Layouts/MainLayout";
+import Favourites from "../Pages/Favourites";
+import About from "../Pages/About";
+import PhoneDetails from "../Pages/PhoneDetails";
+import Home from "../Pages/home";
+import ErrorPage from "../Pages/ErrorPage";
+import Cart from "../Pages/Cart";
 
 export const router = createBrowserRouter([
   {
     path: "/",
     Component: MainLayout,
-    errorElement: <p>404 Error</p>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         index:true,
@@ -15,11 +19,19 @@ export const router = createBrowserRouter([
       },
       {
         path: "/favourites",
-        element: <p>favourites items</p>,
+        element: <Favourites></Favourites>
       },
       {
         path: "/about",
-        element: <p>about pages</p>,
+        element: <About></About>
+      },
+      {
+        path: "/phone-details",
+        element: <PhoneDetails></PhoneDetails>
+      },
+      {
+        path: "/cart",
+        element: <Cart></Cart>
       },
     ],
   },
